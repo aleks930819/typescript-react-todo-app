@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -17,7 +17,6 @@ const Header = ({ todos, setTodos }: Props) => {
   };
 
   const addTodoHandler = (e: React.FormEvent<HTMLFormElement>): void => {
-    
     e.preventDefault();
     if (todo.trim().length === 0) {
       return;
