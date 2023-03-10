@@ -14,7 +14,7 @@ const App: FC = () => {
   return (
     <Container>
       <Header todos={todos} setTodos={setTodos} />
-      <Todos todos={todos} />
+      <Todos todos={todos} setTodos={setTodos} />
     </Container>
   );
 };
