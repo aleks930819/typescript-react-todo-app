@@ -1,13 +1,8 @@
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { Todo } from '../../shared/interfaces';
+import { Todo,TodoState } from '../../shared/interfaces';
 
-interface Props {
-  todos: Todo[];
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-}
 
-const Todos = ({ todos, setTodos }: Props) => {
-    
+const Todos = ({ todos, setTodos }: TodoState) => {
   const changeIsComepleted = (id: string) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {

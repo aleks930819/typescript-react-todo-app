@@ -2,14 +2,9 @@ import { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
-import { Todo } from '../../shared/interfaces';
+import { Todo, TodoState } from '../../shared/interfaces';
 
-interface Props {
-  todos: Todo[];
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-}
-
-const Header = ({ todos, setTodos }: Props) => {
+const Header = ({ todos, setTodos }: TodoState) => {
   const [todo, setTodo] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
